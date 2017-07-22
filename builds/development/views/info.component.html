@@ -1,0 +1,13 @@
+<div class="mainClass">
+
+
+<h1>my name is : {{name}}</h1>
+<h2>my age is : {{age}}</h2>
+<ul>
+  <input #newItem [(ngModel)]="name">
+  <input type="button" value="Add Item" (click)="btnAdd(newItem.value)">
+  <li *ngFor ="#job of jobs" (click)="chAge()" >
+    <my-job [title]="job.title" [place]="job.place" ></my-job>
+</ul>
+
+</div>
